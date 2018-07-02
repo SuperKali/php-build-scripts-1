@@ -1,7 +1,7 @@
 #!/bin/bash
-[ -z "$PHP_VERSION" ] && PHP_VERSION="7.2.7"
+[ -z "$PHP_VERSION" ] && PHP_VERSION="7.3.0alpha2"
 
-PHP_IS_BETA="no"
+PHP_IS_BETA="yes"
 
 ZLIB_VERSION="1.2.11"
 MBEDTLS_VERSION="2.11.0"
@@ -17,8 +17,8 @@ LIBJPEG_VERSION="8"
 OPENSSL_VERSION="1.1.0h"
 
 EXT_NCURSES_VERSION="1.0.2"
-EXT_PTHREADS_VERSION="a3057347da7fde81c9ae82ac3669b9c08828c482"
-EXT_YAML_VERSION="2.0.2"
+EXT_PTHREADS_VERSION="c51c509b08375a299ebee5cc4bdf0a9a95d9156e"
+EXT_YAML_VERSION="24eec49f07beb4a851b019425d08b970398b70cd"
 EXT_LEVELDB_VERSION="65971421d31b3d01dfa4205b4698c11b9736fdef"
 EXT_POCKETMINE_CHUNKUTILS_VERSION="master"
 EXT_XDEBUG_VERSION="2.6.0"
@@ -729,7 +729,7 @@ fi
 get_github_extension "pthreads" "$EXT_PTHREADS_VERSION" "pmmp" "pthreads" #"v" needed for release tags because github removes the "v"
 #get_pecl_extension "pthreads" "$EXT_PTHREADS_VERSION"
 
-get_github_extension "yaml" "$EXT_YAML_VERSION" "php" "pecl-file_formats-yaml"
+get_github_extension "yaml" "$EXT_YAML_VERSION" "pmmp" "pecl-file_formats-yaml"
 #get_pecl_extension "yaml" "$EXT_YAML_VERSION"
 
 get_github_extension "igbinary" "$EXT_IGBINARY_VERSION" "igbinary" "igbinary"
