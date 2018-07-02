@@ -2,9 +2,9 @@
 
 REM For future users: This file MUST have CRLF line endings. If it doesn't, lots of inexplicable undesirable strange behaviour will result.
 REM Also: Don't modify this version with sed, or it will screw up your line endings.
-set PHP_MAJOR_VER=7.2
-set PHP_VER=%PHP_MAJOR_VER%.7
-set PHP_IS_BETA="no"
+set PHP_MAJOR_VER=7.3
+set PHP_VER=%PHP_MAJOR_VER%.0alpha2
+set PHP_IS_BETA=yes
 set PHP_SDK_VER=2.1.1
 set PATH=C:\Program Files\7-Zip;C:\Program Files (x86)\GnuWin32\bin;%PATH%
 set VC_VER=vc15
@@ -16,8 +16,8 @@ set LIBYAML_VER=660242d6a418f0348c61057ed3052450527b3abf
 set PTHREAD_W32_VER=2-9-1
 set LEVELDB_MCPE_VER=e593bfda9347a6118b8f58bb50db29c2a88bc50b
 
-set PHP_PTHREADS_VER=a3057347da7fde81c9ae82ac3669b9c08828c482
-set PHP_YAML_VER=2.0.2
+set PHP_PTHREADS_VER=c51c509b08375a299ebee5cc4bdf0a9a95d9156e
+set PHP_YAML_VER=24eec49f07beb4a851b019425d08b970398b70cd
 set PHP_POCKETMINE_CHUNKUTILS_VER=master
 set PHP_IGBINARY_VER=2.0.6
 REM this is 1.2.6 but tags with a "v" prefix are a pain in the ass
@@ -149,7 +149,7 @@ call :pm-echo "Getting additional PHP extensions..."
 cd php-src\ext
 
 call :get-extension-zip-from-github "pthreads"              "%PHP_PTHREADS_VER%"              "pmmp"     "pthreads"                || exit 1
-call :get-extension-zip-from-github "yaml"                  "%PHP_YAML_VER%"                  "php"      "pecl-file_formats-yaml"  || exit 1
+call :get-extension-zip-from-github "yaml"                  "%PHP_YAML_VER%"                  "pmmp"     "pecl-file_formats-yaml"  || exit 1
 call :get-extension-zip-from-github "pocketmine_chunkutils" "%PHP_POCKETMINE_CHUNKUTILS_VER%" "dktapps"  "PocketMine-C-ChunkUtils" || exit 1
 call :get-extension-zip-from-github "igbinary"              "%PHP_IGBINARY_VER%"              "igbinary" "igbinary"                || exit 1
 call :get-extension-zip-from-github "ds"                    "%PHP_DS_VER%"                    "php-ds"   "extension"               || exit 1
